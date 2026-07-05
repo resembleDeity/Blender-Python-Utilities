@@ -1,67 +1,81 @@
-from enum import Enum, auto
+from enum import Enum
 
 
 
 class ENodeTreeType(Enum):
-    GeometryNodeTree = auto(),
-    CompositorNodeTree = auto(),
-    ShaderNodeTree = auto(),
-    TextureNodeTree = auto(),
+	GeometryNodeTree = "GeometryNodeTree",
+	CompositorNodeTree = "CompositorNodeTree",
+	ShaderNodeTree = "ShaderNodeTree",
+	TextureNodeTree = "TextureNodeTree",
 
 class ENodeSocketType(Enum):
-    DEFAULT = auto(),
-    NodeSocketBool = auto(),
-    NodeSocketColor = auto(),
-    NodeSocketFloat = auto(),
-    NodeSocketTexture = auto(),
-    NodeSocketVector = auto(),
+	DEFAULT = "DEFAULT",
+	Bool = "NodeSocketBool",
+	Color = "NodeSocketColor",
+	Float = "NodeSocketFloat",
+	Texture = "NodeSocketTexture",
+	NodeSocketVector = "NodeSocketVector",
 
 class ENodeColorTagType(Enum):
-    NONE = auto(), 
-    ATTRIBUTE = auto(),
-    COLOR = auto(),
-    CONVERTER = auto(),
-    DISTORT = auto(),
-    FILTER = auto(),
-    GEOMETRY = auto(),
-    INPUT = auto(),
-    MATTE = auto(),
-    OUTPUT = auto(), 
-    SCRIPT = auto(),
-    SHADER = auto(),
-    TEXTURE = auto(),
-    VECTOR = auto(),
-    PATTERN = auto(),
-    INTERFACE = auto(),
-    GROUP = auto(),
+	NONE = "NONE", 
+	ATTRIBUTE = "ATTRIBUTE",
+	COLOR = "COLOR",
+	CONVERTER = "CONVERTER",
+	DISTORT = "DISTORT",
+	FILTER = "FILTER",
+	GEOMETRY = "GEOMETRY",
+	INPUT = "INPUT",
+	MATTE = "MATTE",
+	OUTPUT = "OUTPUT", 
+	SCRIPT = "SCRIPT",
+	SHADER = "SHADER",
+	TEXTURE = "TEXTURE",
+	VECTOR = "VECTOR",
+	PATTERN = "PATTERN",
+	INTERFACE = "INTERFACE",
+	GROUP = "GROUP",
 
 class ENodeType(Enum):
-    # Input and output node
-    NodeGroupInput = auto(),
-    NodeGroupOutput = auto(),
-    
-    # Reroute node
-    NodeReroute = auto(),
+	# Input and output node
+	Input = "NodeGroupInput",
+	Output = "NodeGroupOutput",
+	
+	# Reroute node
+	Reroute = "NodeReroute",
 
-    # Shader nodes
-    ShaderNodeAddShader = auto(),
-    ShaderNodeCombineXYZ = auto(),
-    ShaderNodeGroup = auto(),
-    ShaderNodeMath = auto(),
-    ShaderNodeMix = auto(),
-    ShaderNodeSeparateXYZ = auto(),
-    ShaderNodeVectorMath = auto(),
+	# Shader nodes
+	ShaderNodeAddShader = "ShaderNodeAddShader",
+	ShaderNodeCombineXYZ = "ShaderNodeCombineXYZ",
+	ShaderNodeGroup = "ShaderNodeGroup",
+	ShaderNodeMath = "ShaderNodeMath",
+	ShaderNodeMix = "ShaderNodeMix",
+	ShaderNodeSeparateXYZ = "ShaderNodeSeparateXYZ",
+	ShaderNodeVectorMath = "ShaderNodeVectorMath",
+
 
 
 class EWorkspaceType(Enum):
-    Animation = "Animation"
-    Compositing = "Compositing"
-    GeometryNodes = "Geometry Nodes"
-    Layout = "Layout"
-    Modeling = "Modeling"
-    Rendering = "Rendering"
-    Scripting = "Scripting"
-    Sculpting = "Sculpting"
-    Shading = "Shading"
-    TexturePaint = "Texture Paint"
-    UVEditing = "UV Editing"
+	Animation = "Animation"
+	Compositing = "Compositing"
+	GeometryNodes = "Geometry Nodes"
+	Layout = "Layout"
+	Modeling = "Modeling"
+	Rendering = "Rendering"
+	Scripting = "Scripting"
+	Sculpting = "Sculpting"
+	Shading = "Shading"
+	TexturePaint = "Texture Paint"
+	UVEditing = "UV Editing"
+
+
+
+class EReportTag(Enum):
+	Debug = "DEBUG",  # Debug.
+	Info = "INFO",  # Info.
+	Operator = "OPERATOR",  # Operator.
+	Property = "PROPERTY",  # Property.
+	Warning = "WARNING",  # Warning.
+	Error = "ERROR",  # Error.
+	InvalidInput = "ERROR_INVALID_INPUT",  # Invalid Input.
+	InvalidContext = "ERROR_INVALID_CONTEXT",  # Invalid Context.
+	OutOfMemory = "ERROR_OUT_OF_MEMORY",  # Out of Memory.
